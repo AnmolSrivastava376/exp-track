@@ -5,8 +5,12 @@
 ::-webkit-scrollbar{
     display: none;
 }
+
 @media (max-width:900px) {
     .col900{
         flex-direction: column;
+    }
+    .flex-adj{
+        flex: 10;
     }
 }
