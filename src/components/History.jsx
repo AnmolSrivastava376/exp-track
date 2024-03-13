@@ -10,7 +10,7 @@ function History() {
   useEffect(() => {
     async function setHistory() {
       try {
-        axios.post("http://localhost:5000/api/v1/get").then((resp) => setSampleData(resp.data));
+        axios.post("http://localhost:5000/api/v1/get").then((resp) => setSampleData(resp.data.reverse()));
       } catch (err) {
         console.log(err);
       }
@@ -25,7 +25,7 @@ function History() {
       </div>
       {SampleData?.map((index) => {
         return (
-          <Link to={`/edit/${index._id}`} key={index._id}>
+          <Link to={`/edit/${index._id}`}>
             <div className="flex cursor-pointer justify-between h-[40px] w-full bg-[#2b2935] rounded-[10px] px-[10px] py-[4px] items-center hover:bg-[#312d3f]">
               <div className="text-white">INR {index.amount}</div>
               <div className="text-gray-500">{index.desc}</div>

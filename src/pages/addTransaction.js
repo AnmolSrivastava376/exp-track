@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 function AddTransaction() {
+  const navigate = useNavigate()
   const [desc, setDesc] = useState("")
   const [amount,setAmount] = useState()
   const [isIncome,setIsIncome] = useState(false)
@@ -12,6 +14,7 @@ function AddTransaction() {
       setAmount(0)
       setDesc("")
       setIsIncome("Expenditure")
+      navigate('/')
     } catch(e){
       console.log(e)
     }
