@@ -33,7 +33,8 @@ function AddTransaction() {
           <option>Expenditure</option>
           <option>Income</option>
         </select>
-        <div className='bg-[#c03535] cursor-pointer w-fit self-center text-[20px] text-white px-[12px] py-[6px] rounded-[10px]' onClick={()=>{
+        <div className='w-full flex gap-[10px] justify-center'>
+        <div className='bg-[#23661d] cursor-pointer w-fit text-[20px] text-white px-[12px] py-[6px] rounded-[10px]' onClick={()=>{
           const newObj={
             desc: desc,
             amount: amount,
@@ -42,6 +43,10 @@ function AddTransaction() {
           };
           HandleClick(newObj)
         }}>Submit</div>
+        <div className='bg-[#c03535] cursor-pointer w-fit self-center text-[20px] text-white px-[12px] py-[6px] rounded-[10px]' onClick={async ()=>{
+          await axios.post('http://localhost:5000/api/v1/delete', id).then(()=>{alert("Deleted this entry");navigate('/')})
+        }}>Delete</div>
+        </div>
       </div>
     </div>
   )
