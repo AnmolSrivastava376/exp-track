@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/add" element={<AddTransaction />} />
-        <Route exact path="/edit" element={<EditTransaction />} />
+        <Route exact path="/edit/:id" element={<EditTransaction />} />
       </Routes>
     </BrowserRouter>
   );
