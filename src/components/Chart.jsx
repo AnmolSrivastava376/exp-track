@@ -49,7 +49,7 @@ const data = {
 };
 function Chart() {
   return (
-    <div className='w-full h-full bg-[#1f1f27] rounded-[10px] p-[20px] flex items-center justify-center'>
+    <div className='w-full h-full bg-[#1f1f27] min-h-[200px] rounded-[10px] p-[20px] flex items-center justify-center'>
       <Line options={options} data={data} />
     </div>
   )
