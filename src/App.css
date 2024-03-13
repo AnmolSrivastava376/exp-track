@@ -10,7 +10,7 @@
     .col900{
         flex-direction: column;
     }
-    .flex-adj{
-        flex: 10;
+    .h-adj{
+        max-height: 420px;
     }
 }

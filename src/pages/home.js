@@ -11,7 +11,7 @@ function Home() {
             <Nav/>
         </div>
         <div className='w-full h-full flex-[9] flex gap-[20px] col900 max-h-[90vh] overflow-hidden'>
-            <div className='w-full h-full flex flex-col flex-[30] bg-[#1f1f27] rounded-[10px] pb-[10px]'>
+            <div className='w-full h-full flex h-adj flex-col flex-[30] bg-[#1f1f27] rounded-[10px] pb-[10px]'>
                 <History/>
             </div>
             <div className='w-full h-full flex flex-col flex-[70] flex-adj'>
